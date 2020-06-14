@@ -1,0 +1,366 @@
+data = 
+[
+	{
+		"name": "Auth - Login",
+		"url": "/api/v1/auth/login",
+		"description": "Login user, will return a token, that me be saved somewhere.",
+		"method": "GET",
+		"params": [
+			{ "name" : "email", "value" : "Email field"},
+			{ "name" : "password", "value" : "Password field"},
+		],
+		"returnIsJson": true,
+		"return": {"user":{"id":1,"name":"Pierre Nicolas","email":"pierre@hotmail.fr","created_at":"2017-12-18 17:58:05","updated_at":"2017-12-18 17:58:05","offer_id":1},"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjYzYTFmY2NiYTNlMDJiOWY5ZmNkZGE2MTI4MGI0YTQyNDg0MDM4ZTRkMjI1MjdjZWM0M2JkODc4ZWU0ZjM5NjM5ZWQ3MzMxMjI5OGZhODQxIn0.eyJhdWQiOiI0IiwianRpIjoiNjNhMWZjY2JhM2UwMmI5ZjlmY2RkYTYxMjgwYjRhNDI0ODQwMzhlNGQyMjUyN2NlYzQzYmQ4NzhlZTRmMzk2MzllZDczMzEyMjk4ZmE4NDEiLCJpYXQiOjE1MTY3MDgyNjYsIm5iZiI6MTUxNjcwODI2NiwiZXhwIjoxNTQ4MjQ0MjY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KFuX2hDKp6MzjKojy7-K-bPeYfsPdLXfVDzAD-Ac1mTz96b0nwrMiJZah6ifn2v0FRwKLygjiNHc9VTt0RorOb2fekmWKbmwOIfspAB3Jb25WeRE3e9FCCSv_m4Is1i-5U2s06O1qLuufcTwtxvRfpHnYI8Nqiga1x3s-zrgd8ItZrC1H5-uwfm7md_Avnz-2yeg75J4jIslBAdfggPuzPrE-Vs5ENzKyigTBGQDXW3WzMplp9lsDrZIlIJEuLfCv_TrmJ08eK_wyz84L2Kptnj3oIMoDzSMZ3RQ4cHNEekJaV6yethegnKzwORxIBkn8DwE-A9T4Xz_wWr4_zahe5uvufAvQZfGTjlwXkT3WtslunjABCQ236cVUlbR4V5-tup3oIWNFyOeYWUJ7yijiCqmGmzVFNcdrGGA04N7mD81LUoKwM_x10Ns-kQkKMlVEXW6AM2tw4IoagcIi5vdf9SsIlYJlcH5zBDmobGXf3WEew65n0jiPmHKX8EVG5nOZxkMIuxMO6GSKw8myNlCG1GT-P1cbrOKzf6EPG-Y1_IXMy4DM_Sv-d0NRDG3FhNscVZOxOE4XDjCCnSJikW3j4Rsi5oMHN6-1CvZGjSRqNUwHIWBHbm0uULf6SVhOoHgt9cSHviDxKt27aOwynY3mYZneGPtKBZXh6tFQcjrAUU"}
+	},
+	{
+		"name": "Auth - Register",
+		"url": "/api/v1/auth/register",
+		"description": "Register user, will auto connect after registering.",
+		"method": "POST",
+		"params": [
+			{ "name" : "email", "value" : "Email field"},
+			{ "name" : "name", "value" : "Name field"},
+			{ "name" : "offer_id", "value" : "This correspond to the offer id, must be set to 1 by default"},
+			{ "name" : "password", "value" : "Password field"},
+			{ "name" : "password_confirmation", "value" : "Confirmation password field"},
+		],
+		"returnIsJson": true,
+		"return": {"user":{"name":"pierre","email":"test2@hotmail.fr","offer_id":1,"updated_at":"2018-01-23 13:00:08","created_at":"2018-01-23 13:00:08","id":14},"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI0NWQ0NDJkYWQ2MDhjZjNjZDM3NjE2NTJmNmI0NmMyNDZkNmYxMWI2ZDQzYTY5ZWFiNzA5Y2U3M2U2MjlhY2UwNWJmYWEyMzY5OTZlMjAwIn0.eyJhdWQiOiI0IiwianRpIjoiYjQ1ZDQ0MmRhZDYwOGNmM2NkMzc2MTY1MmY2YjQ2YzI0NmQ2ZjExYjZkNDNhNjllYWI3MDljZTczZTYyOWFjZTA1YmZhYTIzNjk5NmUyMDAiLCJpYXQiOjE1MTY3MTI0MDgsIm5iZiI6MTUxNjcxMjQwOCwiZXhwIjoxNTQ4MjQ4NDA4LCJzdWIiOiIxNCIsInNjb3BlcyI6W119.BZ-0unsdVRhDjtqv95PHewVr_PUFR8wCL8DGVdHe3pk8zfskpNXc4Pj1I8iUsTzW-GoVLXlVKuG9r2VwOxGA5pQtSH-0Edj4b5DXuuYtQ_hgyy0FdP63G1ENaPSd-zLaVC2gcMjL2dnSbkLWnf1HSYCmfX-V0HQBRMMS18LfDLuWVYkpE2amekFbkCnVxFOT3MVi_gGQCJrpUZ1-RNFkeK5DoXdHiixpq49fkoKeOx4Cj1_H29Qm6ovf_6KhvtEaoJ4HC49g4eJuv8TxdTPMCHADcxQLW-wQTsp90czNrp2YmtyzDgScxEH1KE3UhFYpInM7e2U1bYcfI53PEtqPc5tDq-qL8lxMuCpeTyMKQ7eKFByn3G5rdWyCVJH2l21wun2LA-ISCGvWbdLUtBOIcdADJKi_9WKu48Rz5qYM3UsvltHzYuSNN0lS66J8kEc4TxeRAv5kudUY2zyau6OIHwtUQ4Mc_V5P4lL2lHWKoQPBKg2M_tPY6TfaEK00XhAP5GbfMxqrnCPoYliyK5-yl8eHDYduvu4Q312w_q6vZ8MHVd3U_tfr5Pmgx2Qi2a1TFzgOtTwG7RT8H9mfrFOVH7AB-35Qpx5dXpZygKtkJ-J9yHKCZYhiH3zN8cfk3wTH4fAfKbZ7Nv9LJfdr-DE2rWvT8OAqZcL8MBTYQ54IL70"}	
+	},
+	{
+		"name": "Auth - Forgot Password",
+		"url": "/api/v1/auth/forgot",
+		"description": "This will send a new password to the user by email, don't forgot specify your email settings in .env file.",
+		"method": "POST",
+		"params": [
+			{ "name" : "email", "value" : "Email field"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "User - Me",
+		"url": "/api/v1/user/me",
+		"description": "Getting user informations.",
+		"method": "GET",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"returnIsJson": true,
+		"return": {"id":14,"name":"pierre","email":"test2@hotmail.fr","created_at":"2018-01-23 13:00:08","updated_at":"2018-01-23 13:00:08","offer_id":1,"size":0,"offer":{"id":1,"name":"Free","capacity":104857600,"created_at":null,"updated_at":null}}
+	},
+	{
+		"name": "User - Delete",
+		"url": "/api/v1/user/delete",
+		"description": "Delete user account.",
+		"method": "DELETE",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "User - Files",
+		"url": "/api/v1/user/files",
+		"description": "Retrieve all the files and directories of user.",
+		"method": "GET",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"returnIsJson": true,
+		"return": [{"path":"1\/images"},{"hash":"9NY0op9fFh","path":"1\/dragFile.png","uploadDate":1516624717,"size":1702,"mime":"image\/png"}]
+	},
+	{
+		"name": "User - Edit profile",
+		"url": "/api/v1/user/{id}",
+		"description": "Edit user information, id of user must be passed as URI parameter.",
+		"method": "PUT",
+		"params": [
+			{ "name" : "name", "value" : "Name field"},
+			{ "name" : "email", "value" : "Email field"},
+		],
+		"returnIsJson": true,
+		"return": {"user":{"id":1,"name":"Pierre Nicolas","email":"pierre@hotmail.fr","created_at":"2017-12-18 17:58:05","updated_at":"2017-12-18 17:58:05","offer_id":1},"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjYzYTFmY2NiYTNlMDJiOWY5ZmNkZGE2MTI4MGI0YTQyNDg0MDM4ZTRkMjI1MjdjZWM0M2JkODc4ZWU0ZjM5NjM5ZWQ3MzMxMjI5OGZhODQxIn0.eyJhdWQiOiI0IiwianRpIjoiNjNhMWZjY2JhM2UwMmI5ZjlmY2RkYTYxMjgwYjRhNDI0ODQwMzhlNGQyMjUyN2NlYzQzYmQ4NzhlZTRmMzk2MzllZDczMzEyMjk4ZmE4NDEiLCJpYXQiOjE1MTY3MDgyNjYsIm5iZiI6MTUxNjcwODI2NiwiZXhwIjoxNTQ4MjQ0MjY2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KFuX2hDKp6MzjKojy7-K-bPeYfsPdLXfVDzAD-Ac1mTz96b0nwrMiJZah6ifn2v0FRwKLygjiNHc9VTt0RorOb2fekmWKbmwOIfspAB3Jb25WeRE3e9FCCSv_m4Is1i-5U2s06O1qLuufcTwtxvRfpHnYI8Nqiga1x3s-zrgd8ItZrC1H5-uwfm7md_Avnz-2yeg75J4jIslBAdfggPuzPrE-Vs5ENzKyigTBGQDXW3WzMplp9lsDrZIlIJEuLfCv_TrmJ08eK_wyz84L2Kptnj3oIMoDzSMZ3RQ4cHNEekJaV6yethegnKzwORxIBkn8DwE-A9T4Xz_wWr4_zahe5uvufAvQZfGTjlwXkT3WtslunjABCQ236cVUlbR4V5-tup3oIWNFyOeYWUJ7yijiCqmGmzVFNcdrGGA04N7mD81LUoKwM_x10Ns-kQkKMlVEXW6AM2tw4IoagcIi5vdf9SsIlYJlcH5zBDmobGXf3WEew65n0jiPmHKX8EVG5nOZxkMIuxMO6GSKw8myNlCG1GT-P1cbrOKzf6EPG-Y1_IXMy4DM_Sv-d0NRDG3FhNscVZOxOE4XDjCCnSJikW3j4Rsi5oMHN6-1CvZGjSRqNUwHIWBHbm0uULf6SVhOoHgt9cSHviDxKt27aOwynY3mYZneGPtKBZXh6tFQcjrAUU"}
+	},
+	{
+		"name": "User - Change password",
+		"url": "/api/v1/user/password/{id}",
+		"description": "Change user password, id of user must be passed as URI parameter.",
+		"method": "PUT",
+		"params": [
+			{ "name" : "old_password", "value" : "Old password field"},
+			{ "name" : "password", "value" : "New password field"},
+			{ "name" : "password_confirmation", "value" : "New password confirmation field"},			
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "File - Detail",
+		"url": "/api/v1/file/detail/{hash}",
+		"description": "Get file informations, hash of file must be passed as URI parameter.",
+		"method": "GET",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"returnIsJson": true,
+		"return": {"id":139,"user_id":1,"filename":"dragFile.png","mime":"image\/png","original_filename":"dragFile.png","created_at":"2018-01-22 12:38:37","updated_at":"2018-01-22 12:38:37","path":"1\/dragFile.png","hash":"9NY0op9fFh","size":1702,"downloads":0,"creator":{"id":1,"name":"Pierre Nicolas","email":"pierre@hotmail.fr","created_at":"2017-12-18 17:58:05","updated_at":"2017-12-18 17:58:05","offer_id":1},"uploaded_date":1516624717}
+	},
+	{
+		"name": "File - Show",
+		"url": "/api/v1/file/show/{hash}",
+		"description": "Get file informations ( for public access ), public hash of file must be passed as URI parameter.",
+		"method": "GET",
+		"returnIsJson": true,
+		"return": {"id":139,"user_id":1,"filename":"dragFile.png","mime":"image\/png","original_filename":"dragFile.png","created_at":"2018-01-22 12:38:37","updated_at":"2018-01-22 12:38:37","path":"1\/dragFile.png","hash":"9NY0op9fFh","size":1702,"downloads":0,"creator":{"id":1,"name":"Pierre Nicolas","email":"pierre@hotmail.fr","created_at":"2017-12-18 17:58:05","updated_at":"2017-12-18 17:58:05","offer_id":1},"uploaded_date":1516624717}
+	},
+	{
+		"name": "File - Share",
+		"url": "/api/v1/file/share/",
+		"description": "This function will create a public_hash or delete it depend on status parameters, if there is no public_hash the file is not public.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "hash", "value" : "File hash"},
+			{ "name" : "status", "value" : "'true' file will be shared, 'false' will not"},
+		],
+		"returnIsJson": true,
+		"return": {"new_hash": "OKweZJdLUMtG2OIW"}
+	},
+	{
+		"name": "File - Download",
+		"url": "/api/v1/file/download/{hash}",
+		"description": "Download the file, hash of file must be passed as URI parameter.",
+		"method": "GET",
+		"returnIsJson": false,
+		"return": "File will be automatically downloaded."
+	},
+	{
+		"name": "File - get",
+		"url": "/api/v1/file/get/{hash}",
+		"description": "Get the file base for preview, hash of file must be passed as URI parameter.",
+		"method": "GET",
+		"returnIsJson": false,
+		"return": "File will be return as Base64."
+	},
+	{
+		"name": "File - Upload",
+		"url": "/api/v1/file/upload",
+		"description": "Upload a file, will return the user total storage size.",
+		"method": "POST",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+			{ "name" : "Content-Type", "value" : "multipart/form-data"}
+		],
+		"params": [
+			{ "name" : "file", "value" : "File to upload"},
+			{ "name" : "path", "value" : "File path"},
+		],
+		"returnIsJson": true,
+		"return": {"size":"14991"}	
+	},
+	{
+		"name": "File - Chunk",
+		"url": "/api/v1/file/chunk",
+		"description": "Upload a file chunked, will return the user total storage size if upload is done else return percentage and other information.",
+		"method": "POST",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+			{ "name" : "Content-Type", "value" : "multipart/form-data"}
+		],
+		"params": [
+			{ "name" : "file", "value" : "File to upload"},
+			{ "name" : "path", "value" : "File path"},
+			{ "name" : "resumableChunkNumber", "value" : "Index of the chunk +1"},
+			{ "name" : "resumableChunkSize", "value" : "Chunk size"},
+			{ "name" : "resumableCurrentChunkSize", "value" : "endByte - startByte"},
+			{ "name" : "resumableTotalSize", "value" : "File size"},
+			{ "name" : "resumableType", "value" : "File type"},
+			{ "name" : "resumableIdentifier", "value" : "File uuid"},
+			{ "name" : "resumableFilename", "value" : "File name"},
+			{ "name" : "resumableRelativePath", "value" : "File name"},
+			{ "name" : "resumableTotalChunks", "value" : "Total chunks number"},
+		],
+		"returnIsJson": true,
+		"return": {
+			"Chunks are not completed" : {
+				"done": "percentage of uploading",
+				"uuid": "File uuid",
+			},
+			"Chunks are completed" : {
+				"uploaded" : "true",
+				"size" : "User size",
+				"hash" : "File hash"
+			}
+		}	
+	},
+	{
+		"name": "File - Rename",
+		"url": "/api/v1/file/rename",
+		"description": "Rename a file.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "hash", "value" : "Hash of file"},
+			{ "name" : "name", "value" : "New file name"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "File - Move",
+		"url": "/api/v1/file/move",
+		"description": "Move a file.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "hash", "value" : "Hash of file"},
+			{ "name" : "newPath", "value" : "New file path as string, example : '/images/'"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "File - Delete",
+		"url": "/api/v1/file/delete/{hash}",
+		"description": "Delete a file, will return the user total storage size, hash of file must be passed as URI parameter.",
+		"method": "DELETE",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"returnIsJson": true,
+		"return": {"size":"14991"}	
+	},
+	{
+		"name": "Directory - Create",
+		"url": "/api/v1/directory/create",
+		"description": "Delete a file, will return the user total storage size, hash of file must be passed as URI parameter.",
+		"method": "POST",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "name", "value" : "File name"},
+			{ "name" : "path", "value" : "Directory path as string, example : '/images/'"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "Directory - Show",
+		"url": "/api/v1/directory/create",
+		"description": "Show a directory information.",
+		"method": "POST",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "path", "value" : "Directory path as string, example : '/images/'"},
+		],
+		"returnIsJson": true,
+		"return": {"name":"test","size":0,"count_files":0,"count_directories":1,"path":"images\/test"}
+	},
+	{
+		"name": "Directory - Rename",
+		"url": "/api/v1/directory/rename",
+		"description": "Rename a directory information.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "name", "value" : "New directory name"},
+			{ "name" : "path", "value" : "Directory path as string, example : '/images/'"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+		"name": "Directory - Move",
+		"url": "/api/v1/directory/move",
+		"description": "Move a directory.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "newPath", "value" : "Directory new path as string, example : '/'"},
+			{ "name" : "oldPath", "value" : "Directory path as string, example : '/images/'"},
+		],
+		"returnIsJson": false,
+		"return": "success"
+	},
+	{
+	"name": "Directory - Put",
+		"url": "/api/v1/directory/delete",
+		"description": "Delete a directory, will return the user total storage size.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "path", "value" : "Directory path as string, example : '/'"},
+		],
+		"returnIsJson": true,
+		"return": {"size":"14991"}
+	},
+	{
+		"name": "Directory - Generate zip",
+		"url": "/api/v1/directory/download",
+		"description": "Delete a directory, will return a id that must be reuse to download the directory.",
+		"method": "POST",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "path", "value" : "Directory path as string, example : '/'"},
+		],
+		"returnIsJson": true,
+		"return": {"temp_id":"I2AYo0M9eD"}
+	},
+	{
+		"name": "Directory - Download zip",
+		"url": "/api/v1/directory/download/{id}",
+		"description": "Delete a directory, id must be passed as URI parameter.",
+		"method": "GET",
+		"returnIsJson": false,
+		"return": "Zipped directory will be automatically downloaded and then deleted from the source."
+	},
+	{
+		"name": "Multiple - Move",
+		"url": "/api/v1/multiple/move",
+		"description": "Move multiple directory or file, directory will move the file inside too.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "files", "value" : " A array of object, hash for file, path for directory, example : [{hash: 'moGFcCH841'}, {path:'/super/cool'}]"},
+			{ "name" : "newPath", "value" : "New file path as string, example : '/images/'"},
+		],
+		"returnIsJson": false,
+		"return": "Success"
+	},
+	{
+		"name": "Multiple - Delete",
+		"url": "/api/v1/multiple/delete",
+		"description": "Delete multiple directory or file, directory will move the file inside too.",
+		"method": "PUT",
+		"headers": [
+			{ "name" : "Authorization", "value" : "Bearer + {user_token}"},
+		],
+		"params": [
+			{ "name" : "files", "value" : " A array of object, hash for file, path for directory, example : [{hash: 'moGFcCH841'}, {path:'/super/cool'}]"},
+			{ "name" : "newPath", "value" : "New file path as string, example : '/images/'"},
+		],
+		"returnIsJson": true,
+		"return": {"size":"14991"}
+	}
+];
